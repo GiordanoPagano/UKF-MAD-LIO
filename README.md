@@ -4,11 +4,11 @@ A C++ framework for **state estimation on Lie manifolds** using an **Unscented K
 
 The project focuses on the implementation of a UKF operating directly on manifold-valued states and its integration with multiple sensing modalities. The main application is a complete **LiDAR–Inertial Odometry pipeline**, combining IMU propagation, point cloud undistortion, MAD-ICP registration, and UKF state estimation. The repository also includes examples for GNSS-aided inertial navigation using synthetic data.
 
-The algorithm and its practical implementation details are described in **"Master_Thesis.pdf"**.
+The algorithm and its practical implementation details are described in **`Master_Thesis.pdf`**.
 
 The theoretical background about UKF is described in **`ukf_manifolds_notes.pdf`**.
 
-The theoretical background about MAD-ICP is described in **`MAD-ICP: It Is All About Matching Data--Robust and Informed LiDAR Odometry`**.
+The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 ---
 
