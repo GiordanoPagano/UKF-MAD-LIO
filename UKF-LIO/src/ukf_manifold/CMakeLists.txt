@@ -1,6 +1,4 @@
-target_compile_features(ukf_manifold_library PUBLIC)
-
-add_library(ukf_manifold
+add_library(ukf_manifold_library
     nav_state.cpp
 )
 
