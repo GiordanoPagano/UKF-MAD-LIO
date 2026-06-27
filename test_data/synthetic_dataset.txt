@@ -1,0 +1,1 @@
+This folder contains all the details about the synthetic trajectories builded to test the GNSS-Inertial-Odometry pipeline
