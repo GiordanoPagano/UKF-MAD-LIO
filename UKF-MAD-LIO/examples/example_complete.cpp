@@ -412,11 +412,10 @@ int main(int argc, char** argv) {
   // I + N + B:  imu_inputs_circular_dirt   imu_inputs_wave_dirt   imu_inputs_infinite_dirt   imu_inputs_spiral_dirt
   // STATE-GT:   imu_states_gt_circular     imu_states_gt_wave     imu_states_gt_infinite     imu_states_gt_spiral
 
-  std::string base_path = data_folder + "/imu_data/";
-  std::string inputs_data_path      = base_path + "imu_inputs_" + traj_name + ".txt";
-  std::string inputs_bias_data_path = base_path + "imu_inputs_" + traj_name + "_bias.txt";
-  std::string inputs_dirt_data_path = base_path + "imu_inputs_" + traj_name + "_dirt.txt";
-  std::string states_gt_path        = base_path + "imu_states_gt_" + traj_name + ".txt";
+  std::string inputs_data_path      = data_folder + "/imu_inputs_" + traj_name + ".txt";
+  std::string inputs_bias_data_path = data_folder + "/imu_inputs_" + traj_name + "_bias.txt";
+  std::string inputs_dirt_data_path = data_folder + "/imu_inputs_" + traj_name + "_dirt.txt";
+  std::string states_gt_path        = data_folder + "/imu_states_gt_" + traj_name + ".txt";
 
   std::string error;
   read_states(states, states_gt_path, states_ext);
@@ -671,12 +670,12 @@ void simulate_imu_data(ImuStates& states_, ImuInputs& inputs_, ImuInputs& inputs
                         
   Eigen::Vector3d g = Eigen::Vector3d(0.0, 0.0, -9.81);
   // TODO why negative
-  std::string states_gt        = data_folder + "/imu_data/imu_states_gt_" + traj_name_ + ".txt";
-  std::string inputs_str       = data_folder + "/imu_data/imu_inputs_" + traj_name_ + ".txt";
-  std::string inputs_bias_str  = data_folder + "/imu_data/imu_inputs_" + traj_name_ + "_bias.txt";
-  std::string inputs_dirt_str  = data_folder + "/imu_data/imu_inputs_" + traj_name_ + "_dirt.txt";
+  std::string states_gt        = data_folder + "/imu_states_gt_" + traj_name_ + ".txt";
+  std::string inputs_str       = data_folder + "/imu_inputs_" + traj_name_ + ".txt";
+  std::string inputs_bias_str  = data_folder + "/imu_inputs_" + traj_name_ + "_bias.txt";
+  std::string inputs_dirt_str  = data_folder + "/imu_inputs_" + traj_name_ + "_dirt.txt";
   std::string biases_str       = bias_gt_str + "/biases_gt.txt";
-  std::string poses_str        = data_folder + "/imu_data/poses_" + traj_name_ + ".txt";
+  std::string poses_str        = data_folder + "/poses_" + traj_name_ + ".txt";
 
 
   Eigen::ArrayXd times = -Eigen::ArrayXd::LinSpaced(N, 0.0, (N - 1) * dt);
@@ -804,7 +803,7 @@ void simulate_imu_data(ImuStates& states_, ImuInputs& inputs_, ImuInputs& inputs
   state_file.close(); 
   /*
   //   imu_states_wave_ext   imu_states_infinite_ext   imu_states_spiral_ext
-  std::ofstream state_ext_file(data_folder + "/imu_data/imu_states_spiral_ext.txt");
+  std::ofstream state_ext_file(data_folder + "/imu_states_spiral_ext.txt");
   for (int i = 0; i < N-1; ++i) {
     const auto& rot_vec = lie_algebra::SO3Log(states_ext_.at(i).rotation());
     const auto& p       = states_ext_.at(i).position();
@@ -826,7 +825,7 @@ void simulate_imu_data(ImuStates& states_, ImuInputs& inputs_, ImuInputs& inputs
 /*
   // ===== SAVE STATES COVARIANCE =====
   // imu_states_circular   imu_states_wave   imu_states_infinite   imu_states_cov_spiral
-  std::ofstream state_cov_file(data_folder + "/imu_data/imu_states_cov_spiral.txt");
+  std::ofstream state_cov_file(data_folder + "/imu_states_cov_spiral.txt");
   for (int i = 0; i < N-1; ++i) {
     const auto& state_cov = states_.at(i).covariance();
     state_cov_file << dt << " "  
@@ -836,7 +835,7 @@ void simulate_imu_data(ImuStates& states_, ImuInputs& inputs_, ImuInputs& inputs
   }
   state_cov_file.close();
   //   imu_states_wave_ext   imu_states_infinite_ext   imu_states_cov_spiral_ext
-  std::ofstream state_cov_ext_file(data_folder + "/imu_data/imu_states_cov_spiral_ext.txt");
+  std::ofstream state_cov_ext_file(data_folder + "/imu_states_cov_spiral_ext.txt");
   for (int i = 0; i < N-1; ++i) {
     const auto& state_cov = states_ext_.at(i).covariance();
     state_cov_ext_file << dt << " "  

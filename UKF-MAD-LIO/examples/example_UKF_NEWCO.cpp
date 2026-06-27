@@ -60,9 +60,9 @@ Eigen::Vector3d rotMatToEuler(const Eigen::Matrix3d& R){
 //
 // ------------------------------------------- Utilities for plotting: ----------------------------------------
 //
-//  splot "gt_states.txt" using 1:2:3 w l, "est_1.txt" using 1:2:3 w l, "est_2.txt" using 1:2:3 w l, "est_3.txt" using 1:2:3 w l
+//  GENERIC: splot "gt_states.txt" using 2:3:4 w l, "est_1.txt" using 2:3:4 w l, "est_2.txt" using 2:3:4 w l, "est_3.txt" using 2:3:4 w l
 //
-//  splot "est_lio.txt" using 1:2:3 w l
+//  splot "est_lio.txt" using 2:3:4 w l, "est_lio_ext.txt" using 2:3:4 w l
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
