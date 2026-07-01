@@ -20,7 +20,8 @@
 // ------------------------------------------- Utilities for plotting: ----------------------------------------
 //
 //  splot "gt_states.txt" using 1:2:3 w l, "estimated_0.txt" using 1:2:3 w l, "estimated_01.txt" using 1:2:3 w l, 
-//        "estimated_02.txt" using 1:2:3 w l, "estimated_03.txt" using 1:2:3 w l, "estimated_gtAll.txt" using 1:2:3 w l
+//        "estimated_02.txt" using 1:2:3 w l, "estimated_03.txt" using 1:2:3 w l, "estimated_04.txt" using 1:2:3 w l, 
+//        "estimated_05.txt" using 1:2:3 w l, "estimated_06.txt" using 1:2:3 w l, "estimated_gtAll.txt" using 1:2:3 w l
 //        
 //  splot "gt_states.txt" using 1:2:3 w l, "estimated_gtAll.txt" using 1:2:3 w l
 //
@@ -1306,8 +1307,8 @@ int main(int argc, char** argv){
   IntegrationSteps dts_imu, dts_states; 
 
   //  V2_01_easy    V2_02_medium    V2_03_difficult
-  std::string dataset_filename = data_folder + "/../../vio/datasets/EUROC/V2_01_easy/mav0/imu0/data.csv";
-  std::string gt_filename      = data_folder + "/../../vio/datasets/EUROC/V2_01_easy/mav0/state_groundtruth_estimate0/data.csv";
+  std::string dataset_filename = data_folder + "/../../vio/datasets/EUROC/V2_03_difficult/mav0/imu0/data.csv";
+  std::string gt_filename      = data_folder + "/../../vio/datasets/EUROC/V2_03_difficult/mav0/state_groundtruth_estimate0/data.csv";
 
   read_input(dts_imu, inputs, dataset_filename);
   read_states(dts_states, gt_states, gt_filename);
