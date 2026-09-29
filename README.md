@@ -11,12 +11,12 @@ The theoretical background about UKF is described in **`ukf_manifolds_notes.pdf`
 The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 ---
-UKF-LIO performing an hard sequence from Newer College dataset
-![UKF-LIO performing an hard sequence from Newer College dataset](videos/UKF-LIO_hard_x15.gif)
+### 🎥 Performance on Hard Sequences (Newer College Dataset)
 
-
-MAD-ICP performing an hard sequence from Newer College dataset
-![MAD-ICP performing an hard sequence from Newer College dataset](videos/MAD-ICP_hard_x20.gif)
+| **UKF-LIO** (Vel: 15x) | **MAD-ICP** (Vel: 20x) |
+| :---: | :---: |
+| ![UKF-LIO performing a hard sequence from Newer College dataset at 15x speed](videos/UKF-LIO_hard_x15.gif) | ![MAD-ICP performing a hard sequence from Newer College dataset at 20x speed](videos/MAD-ICP_hard_x20.gif) |
+| *Execution of UKF-LIO on a Newer College dataset Hard Sequence, reproduced at accelerated speed 15x.* | *Execution of MAD-ICP on a Newer College dataset Hard Sequence, reproduced at accelerated speed 20x.* |
 
 # Repository Organization
 
