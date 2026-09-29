@@ -12,6 +12,8 @@ The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 ---
 
+![UKF-LIO performing an hard sequence from Newer College dataset](videos/UKF-LIO_hard_x15.gif)
+
 # Repository Organization
 
 The repository is organized into two independent components.
