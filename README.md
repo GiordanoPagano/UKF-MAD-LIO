@@ -11,7 +11,7 @@ The theoretical background about UKF is described in **`ukf_manifolds_notes.pdf`
 The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 ---
-### 🎥 Performance on Hard Sequences (Newer College Dataset)
+### Performance on Hard Sequences (Newer College Dataset)
 
 | **UKF-LIO** (Vel: 15x) | **MAD-ICP** (Vel: 20x) |
 | :---: | :---: |
