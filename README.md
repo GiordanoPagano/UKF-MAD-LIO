@@ -11,8 +11,12 @@ The theoretical background about UKF is described in **`ukf_manifolds_notes.pdf`
 The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 ---
-
+UKF-LIO performing an hard sequence from Newer College dataset
 ![UKF-LIO performing an hard sequence from Newer College dataset](videos/UKF-LIO_hard_x15.gif)
+
+
+MAD-ICP performing an hard sequence from Newer College dataset
+![MAD-ICP performing an hard sequence from Newer College dataset](videos/MAD-ICP_hard_x20.gif)
 
 # Repository Organization
 
