@@ -21,7 +21,7 @@ The theoretical background about MAD-ICP is described in **`MAD-ICP.pdf`**.
 
 The repository is organized into two independent components.
 
-## 1. UKF-MAD-ICP: core C++ Implementation
+## 1. UKF-LIO: core C++ Implementation
 
 This is the main project and contains the complete implementation of the filtering framework. It can be executed directly without ROS and includes:
 
